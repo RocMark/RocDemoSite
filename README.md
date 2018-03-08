@@ -1,9 +1,6 @@
 # RocMarkDemoSite
 
-展示過去練習作品
-完全ClientSide
-
-//* remove origin fail test
+展示過去練習成果
 
 # TODOList
 - [ ] SideNav 待改成 slideInLeft
