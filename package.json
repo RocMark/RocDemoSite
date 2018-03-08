@@ -1,0 +1,41 @@
+{
+  "name": "template",
+  "version": "0.0.0",
+  "description": "Gulp Working Template",
+  "private": true,
+  "main": "gulpfile.js",
+  "keywords": [
+    "gulp"
+  ],
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": {
+    "name": "RocMark",
+    "email": "onigir77799@gmail.com",
+    "url": "https://github.com/RocMark"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "del": "^3.0.0",
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^4.0.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-pug-lint": "^0.1.6",
+    "gulp-sass": "^3.1.0",
+    "gulp-stylus": "^2.6.0",
+    "gulp-typescript": "^3.2.4",
+    "gulp-uglifyes": "^0.1.3",
+    "typescript": "^2.7.1"
+  }
+}

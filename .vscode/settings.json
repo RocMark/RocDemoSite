@@ -1,0 +1,27 @@
+{
+    "editor.fontSize": 20,
+    "editor.wordWrap": "off",
+    "editor.lineHeight": 28,
+    "files.autoSave": "onWindowChange",
+    "sublimeTextKeymap.promptV3Features": true,
+    "workbench.colorTheme": "Monokai Dark Soda",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.snippetSuggestions": "top",
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.renderIndentGuides": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "files.associations": {
+        "*.pug": "jade",
+        "*.styl": "stylus"
+    },
+    "workbench.sideBar.location": "left",
+    "workbench.statusBar.visible": true,
+    "workbench.activityBar.visible": true,
+    "cSpell.userWords": [
+    ],
+    "css.validate": false,
+    "scss.validate": false,
+    "eslint.autoFixOnSave": true,
+    "markdown.extension.preview.autoShowPreviewToSide": false,
+}

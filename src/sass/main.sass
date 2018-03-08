@@ -1,0 +1,41 @@
+@charset 'utf-8'
+// @import _reset 
+@import _normalize
+@import _base
+@import _mixin
+//------------------------------------------------
+@import _layout
+@import _component 
+@import _nav
+//------------------------------------------------
+//* MixIn
+// +bgi('../img/demo.jpg','位置可加可不加')
+//------------------------------------------------
+//* 快捷篇 circle / triangle wh 正方形
+// inlist 水平List / hrthick hr厚度
+//------------------------------------------------
+//* Font 
+// 'Oswald', sans-serif
+// 'Berkshire Swash', cursive
+// 'Raleway', sans-serif
+//------------------------------------------------
+//* 作全域字體大小切換用
+@function toRem($px)
+    @return ( $px / $base-font-size ) * 1rem
+//------------------------------------------------
+body
+    // background-color: #0E1316
+main
+    position: relative
+header
+    border: 0.5px solid #f50057
+
+
+.fullScreenBG
+    +fullScreen
+    +bgi('../img/bg2.jpg', right bottom,#0E1316)
+    background-size: contain
+    position: fixed
+    top: 0
+    left: 0
+    z-index: -9999

@@ -1,0 +1,164 @@
+{
+	"Color": {
+		"prefix": "co",
+		"body": [
+			"color: #$1",
+		],
+		"description": "描述可有可無"
+	},
+	"TestLine": {
+		"prefix": "tl",
+		"body": [
+			"border: 0.5px solid #f50057"
+		],
+	},
+	"BorderBox": {
+		"prefix": "boxsi",
+		"body": [
+			"box-sizing: border-box"
+		],
+	},
+	"Uppercase": {
+		"prefix": "upper",
+		"body": [
+			"text-transform: uppercase"
+		],
+	},
+	"Top0": {
+		"prefix": "top0",
+		"body": [
+			"top: 0",
+			"left: 0"
+		],
+	},
+	"Position Absolute": {
+		"prefix": "poab",
+		"body": [
+			"position: absolute",
+			"top: 0",
+			"left: 0"
+		],
+	},
+	"Position Fixed": {
+		"prefix": "pofix",
+		"body": [
+			"position: fixed",
+			"top: 0",
+			"left: 0"
+		],
+	},
+	"Center": {
+		"prefix": "center",
+		"body": [
+			"position: absolute",
+			"top: 50%",
+			"left: 50%",
+			"transform: translate(-50%, -50%)"
+		],
+	},
+	"Flexflow": {
+		"prefix": "disfl",
+		"body": [
+			"display: flex",
+			"flex-flow: row nowrap",
+		],
+	},
+	"Board0": {
+		"prefix": "bo0",
+		"body": [
+			"border: 0",
+		],
+	},
+	"Round Border": {
+		"prefix": "brr",
+		"body": [
+			"border-radius: 15px",
+		],
+	},
+	"Normal Border": {
+		"prefix": "bor",
+		"body": [
+			"border: 0.5px solid #000",
+		],
+	},
+	"display none": {
+		"prefix": "none",
+		"body": [
+			"display: none",
+		],
+	},
+	"text center": {
+		"prefix": "tec",
+		"body": [
+			"text-align: center",
+		],
+	},
+	"transparent": {
+		"prefix": "transparent",
+		"body": [
+			"transparent",
+		],
+	},
+	"hr": {
+		"prefix": "hr",
+		"body": [
+			"//------------------------------------------------",
+		],
+	},
+	"inlineList": {
+		"prefix": "inlist",
+		"body": [
+			"+inlineList()",
+		],
+	},
+	"bgi": {
+		"prefix": "bgi",
+		"body": [
+			"+bgi('../img/$1',$2)",
+		],
+	},
+	"same Width & Height": {
+		"prefix": "wh",
+		"body": [
+			"+square($1)",
+		],
+	},
+	"TextShadow": {
+		"prefix": "teshadow",
+		"body": [
+			"text-shadow: 2px 2px 3px #9e9e9e$1",
+		],
+	},
+	"BoxShadow": {
+		"prefix": "boxshadow",
+		"body": [
+			"box-shadow: 2px 2px 3px 2px #9e9e9e$1",
+		],
+	},
+	"triangle": {
+		"prefix": "triangle",
+		"body": [
+			"+triangle(up$1, #000$2, 10$3px)",
+		],
+	},
+	"circle": {
+		"prefix": "circle",
+		"body": [
+			"+circle($1) ",
+		],
+	},
+	"resize": {
+		"prefix": "resize",
+		"body": [
+			"resize: vertical$1",
+		],
+	},
+	"hr thick": {
+		"prefix": "hrthick",
+		"body": [
+			"border: none",
+			"height: 2px$1",
+			"background-color: #000$2",
+		],
+	},
+}

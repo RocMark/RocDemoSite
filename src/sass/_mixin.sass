@@ -1,0 +1,69 @@
+@mixin bgi($imgSrc,$position: center top,$color: #eee)
+    background: $color url($imgSrc) no-repeat $position
+
+@mixin fullScreen
+    box-sizing: border-box
+    width: 100%
+    height: 100vh
+
+@mixin inlineList
+    display: flex
+    flex-flow: row nowrap
+    padding: 0
+    margin: 0
+    list-style-type: none
+
+@mixin circle($width)
+    width: $width
+    height: $width
+    border-radius: $width/2
+
+@mixin triangle($dir:up, $color:#000, $size:10px) 
+    @if ($dir == up)
+        border-color: transparent transparent $color
+        border-style: solid
+        border-width: 0 $size $size
+        height: 0
+        width: 0
+    @if ($dir == down) 
+        border-color: $color transparent transparent transparent
+        border-style: solid
+        border-width: $size
+        height: 0
+        width: 0
+    @if ($dir == left) 
+        border-color: transparent $color transparent transparent
+        border-style: solid
+        border-width: $size $size $size 0
+        height: 0
+        width: 0
+    @if ($dir == right) 
+        border-color: transparent transparent transparent $color
+        border-style: solid
+        border-width: $size 0 $size $size
+        height: 0
+        width: 0
+    @if ($dir == bottomright) 
+        border-color: transparent transparent $color transparent
+        border-style: solid
+        border-width: 0 0 $size $size
+        height: 0
+        width: 0
+    @if ($dir == bottomleft) 
+        border-color: transparent transparent transparent $color
+        border-style: solid
+        border-width: $size 0 0 $size
+        height: 0
+        width: 0
+    @if ($dir == topleft) 
+        border-color: $color transparent transparent transparent
+        border-style: solid
+        border-width: $size $size 0 0
+        height: 0
+        width: 0
+    @if ($dir == topright) 
+        border-color: transparent $color transparent transparent
+        border-style: solid
+        border-width: 0 $size $size 0
+        height: 0
+        width: 0
