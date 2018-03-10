@@ -1,41 +1,60 @@
 @charset 'utf-8'
-// @import _reset 
 @import _normalize
 @import _base
 @import _mixin
 //------------------------------------------------
-@import _layout
-@import _component 
 @import _nav
+@import _aside
+@import _article
 //------------------------------------------------
-//* MixIn
-// +bgi('../img/demo.jpg','位置可加可不加')
-//------------------------------------------------
-//* 快捷篇 circle / triangle wh 正方形
-// inlist 水平List / hrthick hr厚度
-//------------------------------------------------
-//* Font 
-// 'Oswald', sans-serif
-// 'Berkshire Swash', cursive
-// 'Raleway', sans-serif
-//------------------------------------------------
-//* 作全域字體大小切換用
-@function toRem($px)
-    @return ( $px / $base-font-size ) * 1rem
+@import _done
 //------------------------------------------------
 body
-    // background-color: #0E1316
+    color: #fff
+.testBox
+    height: 1500px
+    background-color: transparent
 main
     position: relative
-header
-    border: 0.5px solid #f50057
-
-
-.fullScreenBG
-    +fullScreen
-    +bgi('../img/bg2.jpg', right bottom,#0E1316)
-    background-size: contain
-    position: fixed
-    top: 0
-    left: 0
-    z-index: -9999
+    max-width: 800px
+    background-color: rgba(#000,0.4)
+    border: 0.2px solid #9e9e9e
+    margin: 0 auto
+    padding: 30px
+//------------------------------------------------
+.asideSection
+    display: none
+    padding: 16px
+    height: 100%
+    // border-right: 0.5px solid #8e8e8e
+.asideSubTitle
+    padding: 8px 16px
+    border: 1px solid #8e8e8e
+    letter-spacing: 1.2px
+//------------------------------------------------
+.asideSubTitle
+    text-align: center
+.siteLinkList
+    list-style-type: none
+    padding: 0
+    li
+        margin-top: 10px
+//------------------------------------------------
+.asideNavItem
+    flex: 1
+    button
+        color: #fff
+        font-weight: bold
+        font-size: 20px
+        +clearBtnStyle
+        cursor: pointer
+        width: 100%
+        height: 60px
+        border-bottom: 2px solid #fff
+        &:hover
+            border-bottom: 3px solid #930077
+            transition: 0.3s
+.asideActive
+    display: block
+.asideLinkActive
+    border-bottom: 3px solid #930077

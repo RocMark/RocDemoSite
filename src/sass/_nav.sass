@@ -1,0 +1,30 @@
+.navSticky
+    position: fixed
+    top: 0
+    left: 0
+    right: 0 
+    z-index: 30
+    border: 1px solid #3e3e3e
+    background-color: rgba(#000,0.9)
+.navList
+    +inlineList()
+    align-items: center
+    height: 75px
+    padding: 10px
+    background-color: rgba(#000,0.7)
+    box-sizing: border-box
+.siteLogo
+    display: flex
+    flex-flow: row nowrap
+    margin-left: 20px
+    margin-right: auto
+    cursor: pointer
+.navItem
+    &:hover
+        transform: scale(1.1)
+        transition: 0.5s
+.navLink
+    padding: 10px 25px
+    color: #fff
+    &:hover
+        border: 0.5px solid #eee

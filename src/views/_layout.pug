@@ -14,6 +14,17 @@ html(lang="zh-Hant-TW")
     //- GoogleFont Oswald|Berkshire|Raleway
     link(href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Raleway" rel="stylesheet")
   body
+    .fullScreenBG
+    nav.mainNav
+      ul.navList
+          .siteLogo
+              button.asideToggle ☰
+              a(href="http://")
+              h1.siteName RocMarkSite
+          li.navItem: a.navLink(href="") Home
+          li.navItem: a.navLink(href="") About
+          li.navItem: a.navLink(href="") Demo
+          li.navItem: a.navLink(href="") Archives
     main
       block main
     footer

@@ -33,7 +33,7 @@ gulp.task('default', ['stylus', 'sass', 'compile_pug', 'typescript', 'minify_img
 // gulp.task('default', ['clean', 'stylus', 'sass', 'compile_pug', 'minify_js', 'typescript', 'minify_img', 'browser-sync'])
 
 gulp.task('sass', () => gulp.src(sassPath.src)
-  .pipe(gulpPlumber())
+  // .pipe(gulpPlumber())
   .pipe(sass())
   .pipe(autoprefixer({
     browsers: ['last 5 versions'],
@@ -66,8 +66,8 @@ gulp.task('minify_img', () =>
     .pipe(gulpPlumber())
     .pipe(imagemin())
     .pipe(gulp.dest(imgPath.dest))
-    .pipe(browserSync.stream())
-    .pipe(gulpNotify('CompressImg Done')))
+    .pipe(browserSync.stream()))
+    // .pipe(gulpNotify('CompressImg Done')))
 
 gulp.task('clean', () =>
   del([`${imgPath.dest}/**/*`]))

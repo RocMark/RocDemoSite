@@ -5,7 +5,7 @@
 # TODOList
 - [ ] SideNav 待改成 slideInLeft
 
-# FixMe
+# Update
 - [ ] Github Pages
 
 # How to Use
@@ -15,7 +15,7 @@ VSCode / npm install / Ctrl+Shift+B 啟動編譯即可
 - 編輯器 VSCode
 - HTML / Pug
 - CSS / Sass
-- JS / ES6 /jQuery
+- JS / ES6 / jQuery
 - 自動化工具 / Gulp
 - 代碼檢查 / ESLint / Cspell(Typo檢測)
 
@@ -49,10 +49,13 @@ LocalStorage存文章，並產生JSON當作備份
 
 # 元件功能區
 
+## ModalBox
+- [ ]Login
+
 ## Nav 相關
 - [ ] DropDown
 - [ ] Collapse
-- [ ] Sticky
+- [x] Sticky(Fixed)
 - [ ] Floating Back2Top
 
 ## 小功能
@@ -72,3 +75,4 @@ LocalStorage存文章，並產生JSON當作備份
 
 # 待做優化
 - [ ] 導入RequireJS
+

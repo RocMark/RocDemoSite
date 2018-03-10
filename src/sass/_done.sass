@@ -1,0 +1,32 @@
+//* MixIn
+// +bgi('../img/demo.jpg','位置可加可不加')
+//------------------------------------------------
+//* 快捷篇 circle / triangle wh 正方形
+// inlist 水平List / hrthick hr厚度
+//------------------------------------------------
+//* Font 
+// 'Oswald', sans-serif
+// 'Berkshire Swash', cursive
+// 'Raleway', sans-serif
+//------------------------------------------------
+//* 作全域字體大小切換用
+@function toRem($px)
+    @return ( $px / $base-font-size ) * 1rem
+//------------------------------------------------
+.fullScreenBG
+    +fullScreen
+    +bgi('../img/bg2.jpg', right bottom,#0E1316)
+    filter: contrast(120%)
+    background-size: contain
+    position: fixed
+    top: 0
+    left: 0
+    z-index: -9999
+//------------------------------------------------
+.asideToggle
+    +clearBtnStyle
+    cursor: pointer
+    color: #fff
+    font-size: 25px
+    margin-right: 10px
+//------------------------------------------------

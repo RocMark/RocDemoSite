@@ -1,6 +1,26 @@
 @mixin bgi($imgSrc,$position: center top,$color: #eee)
     background: $color url($imgSrc) no-repeat $position
 
+@mixin square($size)
+    width: $size
+    height: $size
+
+@mixin hrStyle($thick: 0.5px,$color: #fff)
+    border: none
+    height: $thick
+    background-color: $color
+
+@mixin clearBtnStyle
+    background-color: transparent
+    border: none
+    outline: none
+    
+@mixin center
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
 @mixin fullScreen
     box-sizing: border-box
     width: 100%
