@@ -2,27 +2,10 @@ extends _layout
 //- ImgPath  (../img/file.jpg)   //watch out filetype!!
 //- htmlPath (./file.html)
 block main
-    //- .testBox
-    aside.sideNav
-        nav
-            ul.asideNavList
-                li.asideNavItem: button.asideNavLink Links
-                li.asideNavItem: button.asideNavLink AboutMe
-                li.asideNavItem: button.asideNavLink Archive
-        section.asideSection.asideActive(data-sectionName="Links")
-            h3.asideSubTitle Links
-        section.asideSection(data-sectionName="AboutMe")
-            h3.asideSubTitle AboutMe
-        section.asideSection(data-sectionName="Archive")
-            h3.asideSubTitle Archive
-        //- section.asideSection(data-sectionName="AboutMe")
-            h3.asideTitle AboutMe
-        //- section.asideSection(data-sectionName="Archive")
-            h3.asideTitle Archive
-        //- section.asideSection(data-sectionName="Tag")
-            h3.asideTitle Tag
-
+    .back2Top ➲
+    //- .back2Top 123
     section.artSection
+        h4.outLineText ArticleSection
         article
             header.artMeta
                 .artTime
@@ -38,7 +21,8 @@ block main
                     .artTag
                         i.fas.fa-tag
                         a.artLink(href="#") JS
-            h2.artTitle Article Title
+            h2.artTitle
+                a(href="#") Article Title123
             p.artPreView Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum fuga, corporis quam nemo dolor tempora deserunt nisi natus enim eos modi inventore nesciunt. Tenetur illo aliquam suscipit! Cumque quia sit, labore officiis quae quod aspernatur temporibus. Consequatur quos magnam quia ipsum nulla reiciendis iure accusantium beatae ipsam minima obcaecati fuga nisi illum sunt tempore minus blanditiis sed quasi eveniet pariatur dolor, repellat officiis dolore! Excepturi ex tempora repellendus itaque laudantium repellat perspiciatis deleniti quae, autem nesciunt enim earum rerum ipsa maiores neque distinctio quas sunt sequi possimus placeat amet porro nisi? Commodi quibusdam consequatur doloremque magnam esse nemo officiis placeat.
             button.readMoreBtn(data-link="#") ReadMore
             hr
@@ -57,7 +41,8 @@ block main
                     .artTag
                         i.fas.fa-tag
                         a.artLink(href="#") JS
-            h2.artTitle Article Title
+            h2.artTitle
+                a(href="#") Article Title123
             p.artPreView Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum fuga, corporis quam nemo dolor tempora deserunt nisi natus enim eos modi inventore nesciunt. Tenetur illo aliquam suscipit! Cumque quia sit, labore officiis quae quod aspernatur temporibus. Consequatur quos magnam quia ipsum nulla reiciendis iure accusantium beatae ipsam minima obcaecati fuga nisi illum sunt tempore minus blanditiis sed quasi eveniet pariatur dolor, repellat officiis dolore! Excepturi ex tempora repellendus itaque laudantium repellat perspiciatis deleniti quae, autem nesciunt enim earum rerum ipsa maiores neque distinctio quas sunt sequi possimus placeat amet porro nisi? Commodi quibusdam consequatur doloremque magnam esse nemo officiis placeat.
             button.readMoreBtn(data-link="#") ReadMore
             hr
@@ -76,7 +61,8 @@ block main
                     .artTag
                         i.fas.fa-tag
                         a.artLink(href="#") JS
-            h2.artTitle Article Title
+            h2.artTitle
+                a(href="#") Article Title123
             p.artPreView Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum fuga, corporis quam nemo dolor tempora deserunt nisi natus enim eos modi inventore nesciunt. Tenetur illo aliquam suscipit! Cumque quia sit, labore officiis quae quod aspernatur temporibus. Consequatur quos magnam quia ipsum nulla reiciendis iure accusantium beatae ipsam minima obcaecati fuga nisi illum sunt tempore minus blanditiis sed quasi eveniet pariatur dolor, repellat officiis dolore! Excepturi ex tempora repellendus itaque laudantium repellat perspiciatis deleniti quae, autem nesciunt enim earum rerum ipsa maiores neque distinctio quas sunt sequi possimus placeat amet porro nisi? Commodi quibusdam consequatur doloremque magnam esse nemo officiis placeat.
             button.readMoreBtn(data-link="#") ReadMore
             hr
@@ -95,26 +81,17 @@ block main
                     .artTag
                         i.fas.fa-tag
                         a.artLink(href="#") JS
-            h2.artTitle Article Title
+            h2.artTitle
+                a(href="#") Article Title123
             p.artPreView Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum fuga, corporis quam nemo dolor tempora deserunt nisi natus enim eos modi inventore nesciunt. Tenetur illo aliquam suscipit! Cumque quia sit, labore officiis quae quod aspernatur temporibus. Consequatur quos magnam quia ipsum nulla reiciendis iure accusantium beatae ipsam minima obcaecati fuga nisi illum sunt tempore minus blanditiis sed quasi eveniet pariatur dolor, repellat officiis dolore! Excepturi ex tempora repellendus itaque laudantium repellat perspiciatis deleniti quae, autem nesciunt enim earum rerum ipsa maiores neque distinctio quas sunt sequi possimus placeat amet porro nisi? Commodi quibusdam consequatur doloremque magnam esse nemo officiis placeat.
             button.readMoreBtn(data-link="#") ReadMore
             hr
-        article
-            header.artMeta
-                .artTime
-                    i.far.fa-calendar-alt
-                    time 2018/3/10
-                .artTags
-                    .artTag
-                        i.fas.fa-tag
-                        a.artLink(href="#") HTML
-                    .artTag
-                        i.fas.fa-tag
-                        a.artLink(href="#") CSS
-                    .artTag
-                        i.fas.fa-tag
-                        a.artLink(href="#") JS
-            h2.artTitle Article Title
-            p.artPreView Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum fuga, corporis quam nemo dolor tempora deserunt nisi natus enim eos modi inventore nesciunt. Tenetur illo aliquam suscipit! Cumque quia sit, labore officiis quae quod aspernatur temporibus. Consequatur quos magnam quia ipsum nulla reiciendis iure accusantium beatae ipsam minima obcaecati fuga nisi illum sunt tempore minus blanditiis sed quasi eveniet pariatur dolor, repellat officiis dolore! Excepturi ex tempora repellendus itaque laudantium repellat perspiciatis deleniti quae, autem nesciunt enim earum rerum ipsa maiores neque distinctio quas sunt sequi possimus placeat amet porro nisi? Commodi quibusdam consequatur doloremque magnam esse nemo officiis placeat.
-            button.readMoreBtn(data-link="#") ReadMore
-            hr
+        .pageNav
+            a(href="#") < Pre
+            a(href="#").pageNavActive 1
+            a(href="#") 2
+            a(href="#") 3
+            a(href="#") 4
+            a(href="#") Next >
+
+//-------------------------------------------------------------

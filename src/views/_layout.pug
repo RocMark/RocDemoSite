@@ -13,22 +13,69 @@ html(lang="zh-Hant-TW")
     link(rel="stylesheet", href="./css/main.css")
     //- GoogleFont Oswald|Berkshire|Raleway
     link(href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Raleway" rel="stylesheet")
-  body
-    .fullScreenBG
+  body#top
+    h4.outLineText MainSection
     nav.mainNav
       ul.navList
-          .siteLogo
-              button.asideToggle ☰
-              a(href="http://")
-              h1.siteName RocMarkSite
-          li.navItem: a.navLink(href="") Home
-          li.navItem: a.navLink(href="") About
-          li.navItem: a.navLink(href="") Demo
-          li.navItem: a.navLink(href="") Archives
+        .siteLogo
+            button.testTrigger T
+            button.asideToggle ≣
+            h1.siteName 
+              a(href="#") RocMarkSite
+        li.navItem: a.navLink(href="") Home
+        li.navItem: a.navLink(href="") About
+        li.navItem: a.navLink(href="") Demo
+        li.navItem: a.navLink(href="") Archives
+          
+    aside.sideNav
+      h4.outLineText SideNav
+      nav
+        h4.outLineText SideNavList
+        ul.asideNavList
+            li.asideNavItem: button.asideNavLink.asideLinkActive Todo
+            li.asideNavItem: button.asideNavLink AboutMe
+            li.asideNavItem: button.asideNavLink Archive
+      section.asideSection.asideActive(data-sectionName="Todo")
+          h3.asideSubTitle TODOList
+          .todoSection
+            form.todoForm
+              .testText 123
+              input#todoInputTitle(type="search" value="" placeholder="add todo here")
+              //- input(type="search" value="" placeholder="adding Link")
+              input(type="submit", value="ADD")
+            ul.todoList
+              li.todoItem
+                .todoTitle
+                  a(href="#").todoLink TODO 1
+                  button.todoBtn.todoRemoveBtn X
+                  button.todoBtn.todoDropBtn ⇩
+                .todoDetail(data-status="hidden") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor vel rerum iusto repellendus corrupti ipsa voluptatum natus quia fugit illo doloremque ratione eos, cupiditate, magnam consequatur, facere quidem quod nisi?
+              li.todoItem
+                .todoTitle
+                  a(href="#").todoLink TODO 2
+                  button.todoBtn.todoRemoveBtn X
+                  button.todoBtn.todoDropBtn ⇩
+                .todoDetail(data-status="hidden") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor vel rerum iusto repellendus corrupti ipsa voluptatum natus quia fugit illo doloremque ratione eos, cupiditate, magnam consequatur, facere quidem quod nisi?
+              li.todoItem
+                .todoTitle
+                  a(href="#").todoLink TODO 3
+                  button.todoBtn.todoRemoveBtn X
+                  button.todoBtn.todoDropBtn ⇩
+                .todoDetail(data-status="hidden") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor vel rerum iusto repellendus corrupti ipsa voluptatum natus quia fugit illo doloremque ratione eos, cupiditate, magnam consequatur, facere quidem quod nisi?
+          
+      section.asideSection(data-sectionName="AboutMe")
+          h3.asideSubTitle AboutMe
+      section.asideSection(data-sectionName="Archive")
+          h3.asideSubTitle Archive
     main
       block main
+    .fullScreenBG
+    .fullScreenFilter
+    .modalBox
+      h3.modalTitle Lorem, ipsum.
+      button.modalExitBtn X
     footer
-      //- © 2018 By RocMark.
+      p © 2018 By RocMark.
 
     script(
     src="https://code.jquery.com/jquery-3.3.1.min.js"

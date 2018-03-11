@@ -1,11 +1,19 @@
 aside
     box-sizing: border-box
     position: fixed
-    top: 78px
+    top: 77px
     left: 0
     height: 100%
     width: 350px
+    z-index: 30
     background-color: rgba(#000,0.9)
 .asideNavList
     +inlineList()
     justify-content: space-between
+//------------------------------------------------
+.asideToggle
+    +clearBtnStyle
+    cursor: pointer
+    color: #fff
+    font-size: 28px
+    margin-right: 10px

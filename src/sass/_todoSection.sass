@@ -1,0 +1,51 @@
+.todoSection
+    border: 0.5px solid #8e8e8e
+    padding: 20px
+.todoForm
+    display: flex
+    flex-flow: column nowrap
+    input
+        margin-top: 10px
+        padding: 8px 16px
+        &:first-child
+            margin-top: 0
+    input[type="submit"]
+        border-radius: 5px
+//------------------------------------------------
+.todoList
+    +clearListStyle
+.todoItem
+
+.todoTitle
+    position: relative
+    display: flex
+    flex-flow: row nowrap
+    align-items: center
+    border: 0.5px solid #f50057
+.todoLink
+    color: #fff
+    display: block
+    padding: 10px
+    margin-top: 5px
+    margin-right: auto
+    &:first-chlid
+        margin-top: 0
+.todoBtn
+    +clearBtnStyle
+    color: #fff
+    font-weight: bold
+    height: 100%
+    &:hover
+        transform: scale(1.5)
+        transition: 0.4s
+.todoRemoveBtn
+.todoDropBtn
+    margin-right: 3px
+
+.todoDetail
+    display: none
+    border: 0.5px solid #f50057
+    padding: 10px
+.todoActive
+    display: block
+//------------------------------------------------

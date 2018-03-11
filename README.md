@@ -2,8 +2,19 @@
 
 展示過去練習成果
 
-# TODOList
-- [ ] SideNav 待改成 slideInLeft
+# Fixed Me
+- [ ] Highlight Current Aside
+
+# TODO Practice
+> pagination 
+> async / await
+> webpack
+> fetch API
+> IconBar
+> ContactForm
+> B2TOP BTN
+> Footer 
+
 
 # Update
 - [ ] Github Pages
