@@ -1,0 +1,55 @@
+.fullScreenFilter
+    +fullScreen
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    z-index: 100
+    background-color: rgba(#000,0.8)
+    filter: blur(2px)
+.modalBox
+    +center
+    position: fixed
+    width: 500px
+    max-width: 80vw
+    z-index: 200
+    box-sizing: border-box
+    // background-color: transparent
+    background-color: #fff
+.modalTitle
+    padding: 10px
+    text-align: center
+    font-size: 32px
+    background-color: #930077
+.modalBtn
+    +btnStyle
+    width: 120px
+    letter-spacing: 0.8px
+    color: #fff
+    margin-left: auto
+    background-color: #005792
+.modalContent
+    padding: 20px
+    text-align: center
+    font-size: 1.1rem
+    color: #000
+    input
+    textarea
+        margin-top: 10px
+        padding: 8px 16px
+    button
+        transform: scale(1.1)
+        transition: 0.4s
+.modalExitBtn
+    +square(31px)
+    border-radius: 50%
+    color: #fff
+    font-weight: bold
+    border: 2px solid #fff
+    background-color: #ab47bc
+    position: absolute
+    top: -10px
+    left: -10px
+    &:hover
+        background-color: #930077
+        transition: 0.3s

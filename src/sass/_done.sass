@@ -14,8 +14,8 @@
     @return ( $px / $base-font-size ) * 1rem
 //------------------------------------------------
 .fullScreenBG
-    +fullScreen
     +bgi('../img/bg2.jpg', right bottom,#0E1316)
+    +fullScreen
     filter: contrast(120%)
     background-size: contain
     position: fixed
@@ -35,10 +35,12 @@
     &:hover
         transition: 0.8s
 footer
-    text-align: center
-    margin-top: 30px
-    color: #fff
-    border: 0.5px solid #7e7e7e
+    p
+        box-sizing: border-box
+        text-align: center
+        color: #fff
+        border-top: 0.5px solid #7e7e7e
+        padding-top: 20px
 //------------------------------------------------
 .outLineText
     display: none

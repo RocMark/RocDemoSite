@@ -6,22 +6,39 @@
 @import _nav
 @import _aside
 @import _article
+
+@import _todoModal
 @import _todoSection
-//------------------------------------------------
+@import _modalBox
+// //------------------------------------------------
 @import _done
+//! git push -u origin master
 //------------------------------------------------
 //! z-index
 // fullScreenBG -99999
 //* aside 30  navSticky 30
 //------------------------------------------------
+.modalBox,.fullScreenFilter
+    // display: none
+//------------------------------------------------
+.fullScreenBG
+    +bgi('../img/bg2.jpg', right bottom,#0E1316)
+    background-size: contain
+    filter: grayscale(10%)
+    // background-position: -350px bottom
+    // transform: scaleX(-1)
+//------------------------------------------------
 body
     color: #fff
     +fullScreen
     position: relative
+    display: flex
+    flex-flow: column nowrap
 .testBox
     height: 1500px
     background-color: transparent
 main
+    flex: 1
     box-sizing: border-box
     max-width: 800px
     background-color: rgba(#000,0.4)
@@ -30,85 +47,10 @@ main
     padding: 30px
     margin-top: 10px
     //* nav 75 & footer height 18
-    min-height: 83.5%
+    // min-height: 83.5%
 //------------------------------------------------
-.asideSection
+.fullScreenFilter,.modalBox
     display: none
-    padding: 16px
-    height: 100%
-    // border-right: 0.5px solid #8e8e8e
-.asideSubTitle
-    padding: 8px 16px
-    border: 1px solid #8e8e8e
-    letter-spacing: 1.2px
-    margin-bottom: 20px
-//------------------------------------------------
-.asideSubTitle
-    text-align: center
-.siteLinkList
-    list-style-type: none
-    padding: 0
-    li
-        margin-top: 10px
-//------------------------------------------------
-.asideNavItem
-    flex: 1
-    button
-        +clearBtnStyle
-        color: #fff
-        font-weight: bold
-        font-size: 20px
-        cursor: pointer
-        width: 100%
-        height: 60px
-        border-bottom: 3px solid #fff
-        &:hover
-            border-bottom: 3px solid #930077
-            transition: 0.3s
-.asideActive
-    display: block
-    
-.asideLinkActive
-    //! 待找為啥寫不上去
-    border-bottom: 3px solid #930077 !important
-//------------------------------------------------
-.fullScreenFilter
-    +fullScreen
-    position: fixed
-    top: 0
-    left: 0
-    right: 0
-    background-color: #eee
-.modalBox
-    +center
-    position: fixed
-    width: 500px
-    height: 400px
-    box-sizing: border-box
-    background-color: #fff
-.modalTitle
-    padding: 10px
-    text-align: center
-    font-size: 32px
-    background-color: #930077
-.modalExitBtn
-    +square(31px)
-    border-radius: 50%
-    color: #fff
-    font-weight: bold
-    border: 2px solid #fff
-    background-color: #ab47bc
-
-
-    position: absolute
-    top: -10px
-    left: -10px
-    &:hover
-        background-color: #930077
-        transition: 0.3s
-        
-
-
 //------------------------------------------------
 .pageNav
     +inlineList()
@@ -121,6 +63,20 @@ main
         font-size: 32px
         &:hover
             border-bottom: 3px solid #fff
-            
 .pageNavActive
     border-bottom: 3px solid #fff
+//------------------------------------------------
+.todoTrigger
+    +btnStyle
+    color: #fff
+    margin-right: 10px
+    &:hover
+        transform: scale(1.1)
+        transition: 0.4s
+.todoModalTrigger
+    background-color: #005792
+.todoFoldTrigger
+    background-color: #6B0848
+.todoClearTrigger
+    background-color: #E61C5D
+//------------------------------------------------

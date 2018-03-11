@@ -1,9 +1,19 @@
 @mixin bgi($imgSrc,$position: center top,$color: #eee)
     background: $color url($imgSrc) no-repeat $position
 
+@mixin btnStyle
+    padding: 8px 16px
+    border-radius: 15px
+    border: none
+    cursor: pointer
+
 @mixin square($size)
     width: $size
     height: $size
+
+@mixin fixAnimationBlur
+    -webkit-backface-visibility: hidden
+    -webkit-transform: translateZ(0) scale(1.0, 1.0)
 
 @mixin hrStyle($thick: 0.5px,$color: #fff)
     border: none

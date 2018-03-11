@@ -2,9 +2,6 @@
 
 展示過去練習成果
 
-# Fixed Me
-- [ ] Highlight Current Aside
-
 # TODO Practice
 > pagination 
 > async / await

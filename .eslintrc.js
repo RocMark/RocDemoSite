@@ -15,8 +15,8 @@ module.exports = {
         "func-names": 0,
         "func-names": ["error", "never"],
         "prefer-arrow-callback": ["error", "never"],
-
-
+        
+        "comma-dangle": 1,
         "object-curly-spacing": 1,
         "spaced-comment":1,
         "no-multiple-empty-lines": 0,

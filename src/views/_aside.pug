@@ -1,0 +1,52 @@
+block aside
+    aside.sideNav
+        h4.outLineText SideNav
+        nav
+            h4.outLineText SideNavList
+            ul.asideNavList
+                li.asideNavItem: button.asideNavLink.asideLinkActive Todo
+                li.asideNavItem: button.asideNavLink AboutMe
+                li.asideNavItem: button.asideNavLink Archive
+        section.asideSection.asideActive(data-sectionName="Todo")
+            h3.asideSubTitle TODOList
+            .todoSection
+                button.todoTrigger.todoModalTrigger ADD
+                button.todoTrigger.todoFoldTrigger Fold
+                button.todoTrigger.todoClearTrigger Clear
+                ul.todoList
+                    li.todoItem
+                        .todoTitle
+                            a(href="#").todoLink TODO 1
+                            button.todoBtn.todoRemoveBtn X
+                            //-⇩ ∧
+                            button.todoBtn.todoDropBtn ∨
+                        .todoDetail(data-status="hidden") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor vel rerum iusto repellendus corrupti ipsa voluptatum natus quia fugit illo doloremque ratione eos, cupiditate, magnam consequatur, facere quidem quod nisi?
+                    //----------------------------------------------------------------------
+                    li.todoItem
+                        .todoTitle
+                            a(href="#").todoLink TODO 1
+                            button.todoBtn.todoRemoveBtn X
+                            //-⇩ ∧
+                            button.todoBtn.todoDropBtn ∨
+                        .todoDetail(data-status="hidden") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor vel rerum iusto repellendus corrupti ipsa voluptatum natus quia fugit illo doloremque ratione eos, cupiditate, magnam consequatur, facere quidem quod nisi?
+                    //----------------------------------------------------------------------
+                    li.todoItem
+                        .todoTitle
+                            a(href="#").todoLink TODO 1
+                            button.todoBtn.todoRemoveBtn X
+                            //-⇩ ∧
+                            button.todoBtn.todoDropBtn ∨
+                        .todoDetail(data-status="hidden") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor vel rerum iusto repellendus corrupti ipsa voluptatum natus quia fugit illo doloremque ratione eos, cupiditate, magnam consequatur, facere quidem quod nisi?
+                    //----------------------------------------------------------------------
+                    li.todoItem
+                        .todoTitle
+                            a(href="#").todoLink TODO 1
+                            button.todoBtn.todoRemoveBtn X
+                            //-⇩ ∧
+                            button.todoBtn.todoDropBtn ∨
+                        .todoDetail(data-status="hidden") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor vel rerum iusto repellendus corrupti ipsa voluptatum natus quia fugit illo doloremque ratione eos, cupiditate, magnam consequatur, facere quidem quod nisi?
+                    //----------------------------------------------------------------------
+        section.asideSection(data-sectionName="AboutMe")
+            h3.asideSubTitle AboutMe
+        section.asideSection(data-sectionName="Archive")
+            h3.asideSubTitle Archive
