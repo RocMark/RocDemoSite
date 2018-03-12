@@ -23,10 +23,4 @@ $(() => {
             }
         }
     }
-
-    $('.todoForm').submit((e) => {
-        let val = $('#todoInputTitle').val()
-        $('.testText').html(val)
-        e.preventDefault()
-    })
 })

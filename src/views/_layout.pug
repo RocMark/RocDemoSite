@@ -23,15 +23,9 @@ html(lang="zh-Hant-TW")
           p.modalText Lorem ipsum dolor sit amet consectetur adipisicing elit. Non neque adipisci, et officia accusantium porro eius eligendi architecto, nostrum rerum debitis exercitationem repellat doloremque eaque harum odit? Quidem accusantium hic necessitatibus neque molestiae quisquam aperiam quos, tempore quia saepe qui alias incidunt suscipit corporis repudiandae magni ex vero a. Alias!
           button.modalBtn.modalSubmitBtn Submit
           button.modalExitBtn X
-    .modalBox.todoModalBox
-        h3.modalTitle TODO ModalBox
-        .modalContent 
-          form.todoForm
-              input.addTodoTitle(type="search" value="" placeholder="TODO Title")
-              input.addTodoLink(type="search" value="" placeholder="Link" spellcheck="false")
-              textarea(rows="8" cols="30" placeholder="TODO Content")
-              input.modalBtn(type="submit", value="ADD")
-              button.modalExitBtn X
+    block todoModalBox
+      include _todoModalBox.pug
+
     //----------------------------------------------------------------------
     footer 
       p © 2018 By RocMark.

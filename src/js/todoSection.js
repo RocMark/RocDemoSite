@@ -1,6 +1,11 @@
 $(() => {
 
-    document.querySelector('.asideNavLink').style.borderBottom = '3px solid #930077'
+    $('.todoAddTrigger').click(() => {
+        $('.todoModalBox').fadeIn(500)
+        $('.fullScreenFilter').fadeIn(300)
+        $('#addTodoTitle').attr('autofocus', 'autofocus')
+    })
+
     
     $('.todoFoldTrigger').click(() => {
         $('.todoDetail').slideUp(300)
@@ -18,10 +23,7 @@ $(() => {
         $('.alertModalBox').children('.modalContent').children('.modalSubmitBtn').text('Yes!')
     })
 
-    $('.todoModalTrigger').click(() => {
-        $('.todoModalBox').fadeIn(500)
-        $('.fullScreenFilter').fadeIn(300)
-    })
+
 
     $('.todoDropBtn').click(function () {
         //! FIX ME !!!!!!!!!!!!!

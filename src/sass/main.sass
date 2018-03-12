@@ -2,11 +2,12 @@
 @import _normalize
 @import _base
 @import _mixin
+@import _media
 //------------------------------------------------
 @import _nav
 @import _aside
 @import _article
-
+//------------------------------------------------
 @import _todoModal
 @import _todoSection
 @import _modalBox
@@ -17,6 +18,7 @@
 //! z-index
 // fullScreenBG -99999
 //* aside 30  navSticky 30
+// #6CC177 #00A0E9 #E24C48 #005792 #6B0848 #E61C5D
 //------------------------------------------------
 .modalBox,.fullScreenFilter
     // display: none
@@ -24,9 +26,17 @@
 .fullScreenBG
     +bgi('../img/bg2.jpg', right bottom,#0E1316)
     background-size: contain
-    filter: grayscale(10%)
+    // filter: grayscale(10%)
     // background-position: -350px bottom
     // transform: scaleX(-1)
+//------------------------------------------------
+.fullScreenFilter,.modalBox
+    display: none
+.testArea
+    padding: 30px
+.testBox
+    height: 1500px
+    background-color: transparent
 //------------------------------------------------
 body
     color: #fff
@@ -34,12 +44,11 @@ body
     position: relative
     display: flex
     flex-flow: column nowrap
-.testBox
-    height: 1500px
-    background-color: transparent
+//------------------------------------------------
 main
     flex: 1
     box-sizing: border-box
+    width: 100%
     max-width: 800px
     background-color: rgba(#000,0.4)
     border: 0.2px solid #9e9e9e
@@ -48,9 +57,6 @@ main
     margin-top: 10px
     //* nav 75 & footer height 18
     // min-height: 83.5%
-//------------------------------------------------
-.fullScreenFilter,.modalBox
-    display: none
 //------------------------------------------------
 .pageNav
     +inlineList()
@@ -66,17 +72,5 @@ main
 .pageNavActive
     border-bottom: 3px solid #fff
 //------------------------------------------------
-.todoTrigger
-    +btnStyle
-    color: #fff
-    margin-right: 10px
-    &:hover
-        transform: scale(1.1)
-        transition: 0.4s
-.todoModalTrigger
-    background-color: #005792
-.todoFoldTrigger
-    background-color: #6B0848
-.todoClearTrigger
-    background-color: #E61C5D
-//------------------------------------------------
+
+

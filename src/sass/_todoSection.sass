@@ -2,8 +2,19 @@
     border: 0.5px solid #8e8e8e
     padding: 20px
 //------------------------------------------------
-
-    
+.todoTrigger
+    +btnStyle
+    color: #fff
+    margin-right: 10px
+    &:hover
+        transform: scale(1.1)
+        transition: 0.4s
+.todoAddTrigger
+    background-color: #005792
+.todoFoldTrigger
+    background-color: #6B0848
+.todoClearTrigger
+    background-color: #E61C5D
 //------------------------------------------------
 .todoList
     +clearListStyle
@@ -37,7 +48,6 @@
 .todoRemoveBtn
 .todoDropBtn
     margin-right: 3px
-
 .todoDetail
     display: none
     border: 0.5px solid #f50057

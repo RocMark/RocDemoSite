@@ -1,6 +1,6 @@
 $(() => {
 
-    $('.fullScreenFilter,.modalBtn,.modalExitBtn').click(() => {
+    $('.fullScreenFilter,.modalBtn[type="submit"],.modalExitBtn').click(() => {
         hideModalBox()
     })
 

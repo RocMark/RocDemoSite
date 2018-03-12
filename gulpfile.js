@@ -54,10 +54,10 @@ gulp.task('compile_pug', () => gulp.src([pugPath.src, pugPath.ignore])
 gulp.task('minify_js', () => gulp.src(jsPath.src)
   .pipe(gulpPlumber())
   .pipe(concat('main.js'))
-  .pipe(uglify({ 
-    mangle: false, 
-    ecma: 6, 
-  }))
+  // .pipe(uglify({ 
+  //   mangle: false, 
+  //   ecma: 6, 
+  // }))
   .pipe(gulp.dest(jsPath.dest))
   .pipe(browserSync.stream()))
 

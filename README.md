@@ -12,6 +12,9 @@
 > B2TOP BTN
 > Footer 
 
+# 待優化
+- ModalBox autofocus
+- Input Search X customize
 
 # Update
 - [ ] Github Pages

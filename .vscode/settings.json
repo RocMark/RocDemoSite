@@ -24,4 +24,11 @@
     "scss.validate": false,
     "eslint.autoFixOnSave": true,
     "markdown.extension.preview.autoShowPreviewToSide": false,
+    "cSpell.words": [
+        "autofocus",
+        "onblur",
+        "onfocus",
+        "onkeyup",
+        "readonly"
+    ],
 }

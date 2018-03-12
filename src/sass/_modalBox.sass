@@ -1,12 +1,3 @@
-.fullScreenFilter
-    +fullScreen
-    position: fixed
-    top: 0
-    left: 0
-    right: 0
-    z-index: 100
-    background-color: rgba(#000,0.8)
-    filter: blur(2px)
 .modalBox
     +center
     position: fixed
@@ -21,13 +12,6 @@
     text-align: center
     font-size: 32px
     background-color: #930077
-.modalBtn
-    +btnStyle
-    width: 120px
-    letter-spacing: 0.8px
-    color: #fff
-    margin-left: auto
-    background-color: #005792
 .modalContent
     padding: 20px
     text-align: center
@@ -40,6 +24,36 @@
     button
         transform: scale(1.1)
         transition: 0.4s
+//------------------------------------------------
+.modalBtnBar
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-end
+    align-items: center
+    margin-top: 10px
+    border: none
+.modalBtn
+    +btnStyle
+    max-width: 120px
+    letter-spacing: 0.8px
+    border-radius: 5px
+    margin: 0 0 0 10px
+    color: #fff
+    background-color: #005792
+    &:hover
+        transform: scale(1.1)
+        transition: 0.4s
+//------------------------------------------------
+.fullScreenFilter
+    +fullScreen
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    z-index: 100
+    background-color: rgba(#000,0.8)
+    filter: blur(2px)
+//------------------------------------------------
 .modalExitBtn
     +square(31px)
     border-radius: 50%

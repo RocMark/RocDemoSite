@@ -1,6 +1,10 @@
-$phone_media = 480px
+$phoneMedia: 480px
+$padMedia: 730px
 // +mobile  
 
 @mixin mobile
-    @media only screen and (max-width: $phone_media)
+    @media only screen and (max-width: $phoneMedia)
+        @content
+@mixin pad
+    @media only screen and (max-width: $padMedia)
         @content
