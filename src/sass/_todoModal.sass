@@ -1,18 +1,23 @@
 #todoForm
     display: flex
     flex-flow: column nowrap
-    input[type="text"],[type="search"]
-        border: 1px solid #8e8e8e
-        margin-top: 10px
-        padding: 8px 16px
-        &:first-child
-            margin-top: 0
+    input
+        &:not([type="submit"]):not([type="reset"])
+            border: 1px solid #8e8e8e
+            margin-top: 10px
+            padding: 8px 16px
+            &:first-child
+                margin-top: 0
     textarea
         border: 1px solid #8e8e8e
 
 #addTodoSubmit
     background-color: #E61C5D
-    &:active
-        border: none
-        outline: none
+    &:focus
+        transform: scale(1.1)
+        transition: 0.4s
 #addTodoReset
+    &:focus
+        transform: scale(1.1)
+        transition: 0.4s
+        

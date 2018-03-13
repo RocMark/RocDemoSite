@@ -83,7 +83,11 @@ gulp.task('browser-sync', () => {
   gulp.watch(jsPath.src, ['minify_js'])
   gulp.watch(tsPath.src, ['typescript'])
   gulp.watch(imgPath.src, ['minify_img'])
-  gulp.watch(`${pugPath.dest}/*.html`).on('change', browserSync.reload)
+  gulp.watch(`${sassPath.src}/*.sass`).on('change', browserSync.reload)
+  gulp.watch(`${stylusPath.src}/*.stl`).on('change', browserSync.reload)
+  gulp.watch(`${pugPath.src}/*.pug`).on('change', browserSync.reload)
+  gulp.watch(`${jsPath.src}/*.js`).on('change', browserSync.reload)
+  gulp.watch(`${tsPath.src}/*.ts`).on('change', browserSync.reload)
 })
 
 // typescript ------------------------------------------------------

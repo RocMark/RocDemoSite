@@ -4,93 +4,10 @@ extends _layout
 block main
     //- .testBox
     section.artSection
-        h4.outLineText ArticleSection
-        article
-            header.artMeta
-                .artTime
-                    i.far.fa-calendar-alt
-                    time 2018/3/10
-                .artTags
-                    .artTag
-                        i.fas.fa-tag
-                        a.artLink(href="#") HTML
-                    .artTag
-                        i.fas.fa-tag
-                        a.artLink(href="#") CSS
-                    .artTag
-                        i.fas.fa-tag
-                        a.artLink(href="#") JS
-            h2.artTitle
-                a(href="#") Article Title123
-            p.artPreView Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum fuga, corporis quam nemo dolor tempora deserunt nisi natus enim eos modi inventore nesciunt. Tenetur illo aliquam suscipit! Cumque quia sit, labore officiis quae quod aspernatur temporibus. Consequatur quos magnam quia ipsum nulla reiciendis iure accusantium beatae ipsam minima obcaecati fuga nisi illum sunt tempore minus blanditiis sed quasi eveniet pariatur dolor, repellat officiis dolore! Excepturi ex tempora repellendus itaque laudantium repellat perspiciatis deleniti quae, autem nesciunt enim earum rerum ipsa maiores neque distinctio quas sunt sequi possimus placeat amet porro nisi? Commodi quibusdam consequatur doloremque magnam esse nemo officiis placeat.
-            button.readMoreBtn(data-link="#") ReadMore
-            hr
-        article
-            header.artMeta
-                .artTime
-                    i.far.fa-calendar-alt
-                    time 2018/3/10
-                .artTags
-                    .artTag
-                        i.fas.fa-tag
-                        a.artLink(href="#") HTML
-                    .artTag
-                        i.fas.fa-tag
-                        a.artLink(href="#") CSS
-                    .artTag
-                        i.fas.fa-tag
-                        a.artLink(href="#") JS
-            h2.artTitle
-                a(href="#") Article Title123
-            p.artPreView Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum fuga, corporis quam nemo dolor tempora deserunt nisi natus enim eos modi inventore nesciunt. Tenetur illo aliquam suscipit! Cumque quia sit, labore officiis quae quod aspernatur temporibus. Consequatur quos magnam quia ipsum nulla reiciendis iure accusantium beatae ipsam minima obcaecati fuga nisi illum sunt tempore minus blanditiis sed quasi eveniet pariatur dolor, repellat officiis dolore! Excepturi ex tempora repellendus itaque laudantium repellat perspiciatis deleniti quae, autem nesciunt enim earum rerum ipsa maiores neque distinctio quas sunt sequi possimus placeat amet porro nisi? Commodi quibusdam consequatur doloremque magnam esse nemo officiis placeat.
-            button.readMoreBtn(data-link="#") ReadMore
-            hr
-        article
-            header.artMeta
-                .artTime
-                    i.far.fa-calendar-alt
-                    time 2018/3/10
-                .artTags
-                    .artTag
-                        i.fas.fa-tag
-                        a.artLink(href="#") HTML
-                    .artTag
-                        i.fas.fa-tag
-                        a.artLink(href="#") CSS
-                    .artTag
-                        i.fas.fa-tag
-                        a.artLink(href="#") JS
-            h2.artTitle
-                a(href="#") Article Title123
-            p.artPreView Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum fuga, corporis quam nemo dolor tempora deserunt nisi natus enim eos modi inventore nesciunt. Tenetur illo aliquam suscipit! Cumque quia sit, labore officiis quae quod aspernatur temporibus. Consequatur quos magnam quia ipsum nulla reiciendis iure accusantium beatae ipsam minima obcaecati fuga nisi illum sunt tempore minus blanditiis sed quasi eveniet pariatur dolor, repellat officiis dolore! Excepturi ex tempora repellendus itaque laudantium repellat perspiciatis deleniti quae, autem nesciunt enim earum rerum ipsa maiores neque distinctio quas sunt sequi possimus placeat amet porro nisi? Commodi quibusdam consequatur doloremque magnam esse nemo officiis placeat.
-            button.readMoreBtn(data-link="#") ReadMore
-            hr
-        article
-            header.artMeta
-                .artTime
-                    i.far.fa-calendar-alt
-                    time 2018/3/10
-                .artTags
-                    .artTag
-                        i.fas.fa-tag
-                        a.artLink(href="#") HTML
-                    .artTag
-                        i.fas.fa-tag
-                        a.artLink(href="#") CSS
-                    .artTag
-                        i.fas.fa-tag
-                        a.artLink(href="#") JS
-            h2.artTitle
-                a(href="#") Article Title123
-            p.artPreView Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum fuga, corporis quam nemo dolor tempora deserunt nisi natus enim eos modi inventore nesciunt. Tenetur illo aliquam suscipit! Cumque quia sit, labore officiis quae quod aspernatur temporibus. Consequatur quos magnam quia ipsum nulla reiciendis iure accusantium beatae ipsam minima obcaecati fuga nisi illum sunt tempore minus blanditiis sed quasi eveniet pariatur dolor, repellat officiis dolore! Excepturi ex tempora repellendus itaque laudantium repellat perspiciatis deleniti quae, autem nesciunt enim earum rerum ipsa maiores neque distinctio quas sunt sequi possimus placeat amet porro nisi? Commodi quibusdam consequatur doloremque magnam esse nemo officiis placeat.
-            button.readMoreBtn(data-link="#") ReadMore
-            hr
+        h4.outLineText#artSectionOutLine ArticleSection
         .pageNav
-            a(href="#") < Pre
-            a(href="#").pageNavActive 1
-            a(href="#") 2
-            a(href="#") 3
-            a(href="#") 4
-            a(href="#") Next >
+            a#pageNavPreBtn(href="#") < Pre
+            a(href="#")#pageNavOne.pageNavActive 1
+            a#pageNavNextBtn(href="#") Next >
 
 //-------------------------------------------------------------

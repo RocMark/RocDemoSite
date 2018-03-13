@@ -3,10 +3,10 @@ block todoModalBox
     h3.modalTitle TODO ModalBox
     .modalContent 
         form#todoForm
-            input#addTodoTitle(type="search" value="" placeholder="TODO Title" spellcheck="false" autocomplete="off")
-            input#addTodoLink(type="search" value="" placeholder="Link" spellcheck="false" autocomplete="off")
+            input#addTodoTitle(type="search" value="TODOSample" placeholder="TODO Title" spellcheck="false" autocomplete="off")
+            input#addTodoLink(type="search" value="https://www.google.com" placeholder="https://Link" spellcheck="false" autocomplete="off")
             textarea#addTodoContent(rows="8" cols="30" placeholder="TODO Content" spellcheck="false" autocomplete="off")
             .modalBtnBar
                 input.modalBtn#addTodoReset(type="reset", value="Reset")
-                input.modalBtn#addTodoSubmit(type="submit", value="ADD")
+                input.modalBtn#addTodoSubmit(type="submit", value="Submit")
     button.modalExitBtn X

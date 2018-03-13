@@ -17,12 +17,9 @@ html(lang="zh-Hant-TW")
     .back2Top ➲
     //- block modalBox
       include _modalBox.pug
-    .modalBox.alertModalBox
-        h3.modalTitle Lorem, ipsum.
-        .modalContent 
-          p.modalText Lorem ipsum dolor sit amet consectetur adipisicing elit. Non neque adipisci, et officia accusantium porro eius eligendi architecto, nostrum rerum debitis exercitationem repellat doloremque eaque harum odit? Quidem accusantium hic necessitatibus neque molestiae quisquam aperiam quos, tempore quia saepe qui alias incidunt suscipit corporis repudiandae magni ex vero a. Alias!
-          button.modalBtn.modalSubmitBtn Submit
-          button.modalExitBtn X
+    block modalBox
+      include _modalBox.pug
+
     block todoModalBox
       include _todoModalBox.pug
 

@@ -17,7 +17,7 @@
 //------------------------------------------------
 //! z-index
 // fullScreenBG -99999
-//* aside 30  navSticky 30
+//* aside 30  navSticky 30  //-⇩ ∧
 // #6CC177 #00A0E9 #E24C48 #005792 #6B0848 #E61C5D
 //------------------------------------------------
 .modalBox,.fullScreenFilter
@@ -68,9 +68,21 @@ main
         font-weight: bold
         font-size: 32px
         &:hover
-            border-bottom: 3px solid #fff
+            border-bottom: 3px solid #fff 
 .pageNavActive
     border-bottom: 3px solid #fff
 //------------------------------------------------
-
-
+aside
+    overflow: scroll
+aside::-webkit-scrollbar
+    display: none
+.todoSection
+    margin-bottom: 160px
+//------------------------------------------------
+//! FIXME
+hr
+    border-top: 0.2px solid #8c8b8b 
+    // border: 0
+    // height: 0.5px
+    // background-color: #8c8b8b
+//------------------------------------------------

@@ -2,10 +2,18 @@
     border: 0.5px solid #8e8e8e
     padding: 20px
 //------------------------------------------------
+.todoTriggerBar
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-around
 .todoTrigger
     +btnStyle
+    flex: 1 
+    margin-left: 8px
+    border-radius: 0
     color: #fff
-    margin-right: 10px
+    &:first-child
+        margin-left: 0
     &:hover
         transform: scale(1.1)
         transition: 0.4s
@@ -37,6 +45,8 @@
     margin-right: auto
     &:first-chlid
         margin-top: 0
+    &:hover
+        text-decoration: underline
 .todoBtn
     +clearBtnStyle
     color: #fff

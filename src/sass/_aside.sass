@@ -7,6 +7,8 @@ aside
     width: 350px
     z-index: 30
     background-color: rgba(#000,0.9)
+    overflow: scroll
+//------------------------------------------------
 .asideNavList
     +inlineList()
     justify-content: space-between
@@ -28,14 +30,13 @@ aside
     border: 1px solid #8e8e8e
     letter-spacing: 1.2px
     margin-bottom: 20px
-//------------------------------------------------
-.asideSubTitle
     text-align: center
-.siteLinkList
-    list-style-type: none
-    padding: 0
-    li
-        margin-top: 10px
+//------------------------------------------------
+.asideIntro
+    padding: 20px
+    margin-bottom: 20px
+    border: 0.5px solid #8e8e8e
+    display: none
 //------------------------------------------------
 .asideNavItem
     flex: 1
@@ -51,7 +52,6 @@ aside
         &:hover
             border-bottom: 3px solid #930077
             transition: 0.3s
-
 .asideActive
     display: block
 .asideLinkActive

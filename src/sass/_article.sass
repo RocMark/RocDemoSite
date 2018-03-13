@@ -1,30 +1,34 @@
 article
     padding: 10px
-    maring-top: 30px
+    maring-top: 45px
     user-select: none
     &:first-child
         margin-top: 0
-    hr
-        +hrStyle(0.5px,#9e9e9e)
 .artMeta
     display: flex
     flex-flow: row nowrap
 .artTime
     margin-right: 10px
+.artFolder
+    margin-right: 10px
+    &:hover
+        transform: scale(1.1)
+        transition: 0.4s
 .artTag
     display: inline-block
     color: #fff
     margin-left: 5px
     cursor: pointer
-    a
-        margin-left: 2px
-        letter-spacing: 0.8px
-        color: #fff
     &:first-child
         margin-left: 0
     &:hover
         transform: scale(1.1)
         transition: 0.4s
+
+.artLink
+    margin-left: 2px
+    letter-spacing: 0.8px
+    color: #fff
 .artTitle
     display: inline-block
     margin-top: 10px

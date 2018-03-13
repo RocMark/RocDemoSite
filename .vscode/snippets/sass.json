@@ -153,12 +153,4 @@
 			"resize: vertical$1",
 		],
 	},
-	"hr thick": {
-		"prefix": "hrthick",
-		"body": [
-			"border: none",
-			"height: 2px$1",
-			"background-color: #000$2",
-		],
-	},
 }
