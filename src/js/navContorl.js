@@ -3,6 +3,7 @@ $(() => {
     // ---------------------------------------
     //* asideNav
     document.querySelector('.asideNavLink').style.borderBottom = '3px solid #930077'
+
     $('.asideNavLink').click(function () {
         $('.asideNavLink').css({ borderBottom: '3px solid #fff' })
         $('.asideSection').removeClass('asideActive')
@@ -41,18 +42,16 @@ $(() => {
     // ---------------------------------------
     //* back2TopBtn
     $('.back2Top, footer').click(() => { scroll2Top() })
-    
     // smooth scrolling
     function scroll2Top() { $('html').animate({ scrollTop: $('html').offset().top }, 1000) }
 
+    // ---------------------------------------
+    //* asideToggle
     $('.asideToggle').click(() => { $('.sideNav').animate({ width: 'toggle' }, 350) })
-
-    fixedNav()
-
-    let back2Top = $('.back2Top')
-
     // ---------------------------------------
     //* fixed Nav
+    fixedNav()
+    let back2Top = $('.back2Top')
     function fixedNav() {
         // Scroll Nav Fixed & Prevent Jumping
         let mainNav = $('.mainNav')
