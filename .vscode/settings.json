@@ -29,6 +29,7 @@
         "onblur",
         "onfocus",
         "onkeyup",
-        "readonly"
+        "readonly",
+        "saib"
     ],
 }

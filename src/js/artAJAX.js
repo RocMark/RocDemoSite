@@ -1,86 +1,99 @@
 $(() => {
-    //! 構思切換 pageNav
     // ? Loop Tags 後面處理
     // *  a 的 Link 未設
     // ? Next Pre 之後再做
-
-
-    //* 首次render [0]~[4] 1~5文章
-    //* 首次要render pageNav 得 文章總數
-
-    //* 點擊pageNav 切換 頁面
-    //* 先 get page count 數
-
-    //* Ex: 3 始為11 (1+2*5)  End為15 (3*5)
-
-    //* 
-
 
     let artList = [{
             time: '2018/3/10',
             folder: 'HTML',
             tags: ['HTML', 'CSS', 'JS'],
             title: 'ArticleTitle',
-            content: 'lorem300',
+            content: 'one',
         }, {
             time: '2018/3/10',
             folder: 'HTML',
             tags: ['HTML', 'CSS', 'JS'],
             title: 'ArticleTitle',
-            content: 'lorem300',
+            content: 'two',
         }, {
             time: '2018/3/10',
             folder: 'HTML',
             tags: ['HTML', 'CSS', 'JS'],
             title: 'ArticleTitle',
-            content: 'lorem300',
+            content: 'three',
         }, {
             time: '2018/3/10',
             folder: 'HTML',
             tags: ['HTML', 'CSS', 'JS'],
             title: 'ArticleTitle',
-            content: 'lorem300',
+            content: 'four',
         }, {
             time: '2018/3/10',
             folder: 'HTML',
             tags: ['HTML', 'CSS', 'JS'],
             title: 'ArticleTitle',
-            content: 'lorem300',
+            content: 'five',
         }, {
             time: '2018/3/10',
             folder: 'HTML',
             tags: ['HTML', 'CSS', 'JS'],
             title: 'ArticleTitle',
-            content: 'lorem300',
+            content: 'six',
         }, {
             time: '2018/3/10',
             folder: 'HTML',
             tags: ['HTML', 'CSS', 'JS'],
             title: 'ArticleTitle',
-            content: 'lorem300',
+            content: 'seven',
         }, {
             time: '2018/3/10',
             folder: 'HTML',
             tags: ['HTML', 'CSS', 'JS'],
             title: 'ArticleTitle',
-            content: 'lorem300',
+            content: 'eight',
         },
     ]
 
-    //* Render Article
-
-    renderArticle(artList)
-    addPageNav(artList)
+    // ? page1 初始 onload & render
+    renderArticle(artList, 1)
 
 
+    addPageNav(artList, 1)
 
-    function renderArticle(data) {
-        let pageNav = $('.pageNav')
+    $('#pageNavNextBtn').click(() => {
+        //* 待寫 render 下5 
+        //* 同理待寫 render 上5 pre
+    })
 
+    $('.pageNavLink').click(function () {
+
+        let currentPage = $('article').attr('data-page')
+        let clickPageNavNum = $(this).text()
+
+        if ($(this).attr('data-page') === currentPage) {
+            //! 待改成 自製 ModalBox
+            console.log('You are on the page')
+        } else {
+            $('.pageNavLink').removeClass('pageNavActive')
+            $(this).addClass('pageNavActive')
+            renderArticle(artList, clickPageNavNum)
+        }
+    })
+    
+    function renderArticle(data, page) {
         let htmlString = ''
-        for (let i = 0; i < data.length; i += 1) {
+        //* 首頁為 page = 1
+        // 修正array從0始 與 頁數從1始之差
+        let mathFix = page - 1
+        let start = 0 + (mathFix * 5)
+        let end = 4 + (mathFix * 5)
+
+        //! 文章總數小於end 造成後面的文章 undefined而出錯
+        let endFix = (data.length > end ? end : (data.length - 1))
+
+        for (let i = start; i <= endFix; i += 1) {
             htmlString += `
-                <article data-artCount="${i}">
+                <article data-page="${page}">
                     <header class="artMeta">
                         <div class="artTime">
                             <i class="far fa-calendar-alt"></i>
@@ -106,7 +119,9 @@ $(() => {
                 <hr>
             `
         }
-        pageNav.before(htmlString)
+        $('.artList').hide()
+        $('.artList').html(htmlString)
+        $('.artList').fadeIn(500)
     }
 
     function addPageNav(data) {
@@ -119,22 +134,21 @@ $(() => {
         let pageNavPreBtn = $('#pageNavPreBtn')
         let pageNavNextBtn = $('#pageNavNextBtn')
         let pageNavOne = $('#pageNavOne')
-        //* 創造pagination
-        //* 單一頁 (創1 隱藏 pre&next)
         pageNavPreBtn.hide()
         if (pages === 1) {
             pageNavNextBtn.hide()
         } else {
             pageNavNextBtn.append()
             let htmlString = ''
-            //* 若要保留 PageOne
             for (let i = 1; i < pages; i += 1) {
                 let pageNum = i + 1
+                //! 等 pushState 寫好回來改 link a href
                 htmlString += `
-                <a href="/${pageNum}">${pageNum}</a>
+                <button class="pageNavLink" href="/${pageNum}" data-page="${pageNum}" >${pageNum}</button>
                 `
             }
             pageNavOne.after(htmlString)
         }
     }
 })
+
