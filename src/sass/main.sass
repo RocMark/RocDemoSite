@@ -88,9 +88,34 @@ aside::-webkit-scrollbar
 //------------------------------------------------
 //! FIXME
 hr
-    border-top: 0.2px solid #8c8b8b 
+    // border-top: 0.2px solid #8c8b8b 
     // border: 0
-    // height: 0.5px
-    // background-color: #8c8b8b
+    border-width: 0.5px
+    background-color: #8c8b8b
 //------------------------------------------------
-
+.contactImg
+    cursor: pointer
+    +square(35px)
+    &:hover
+        transform: scale(1.1)
+        transition: 0.4s
+.contactSection
+    font-size: 17px
+    img
+        @extend .contactImg
+.contactBar
+    display: flex
+    flex-flow: row nowrap
+    align-items: center
+    img
+        @extend .contactImg
+        margin-right: 15px
+//------------------------------------------------
+.siteInfoSection
+    h3
+        font-family: 'Oswald', sans-serif
+        letter-spacing: 1.5px
+        font-weight: 400
+    hr
+        margin: 15px 0
+//------------------------------------------------

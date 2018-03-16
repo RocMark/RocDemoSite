@@ -4,6 +4,86 @@ $(() => {
     // ? Next Pre 之後再做
 
     let artList = [{
+            id: 1,
+            time: '2018/3/10',
+            folder: 'HTML',
+            tags: ['HTML', 'CSS', 'JS'],
+            title: 'ArticleTitle',
+            content: 'one',
+        }, {
+            id: 2,
+            time: '2018/3/10',
+            folder: 'HTML',
+            tags: ['HTML', 'CSS', 'JS'],
+            title: 'ArticleTitle',
+            content: 'two',
+        }, {
+            id: 3,
+            time: '2018/3/10',
+            folder: 'HTML',
+            tags: ['HTML', 'CSS', 'JS'],
+            title: 'ArticleTitle',
+            content: 'three',
+        }, {
+            id: 4,
+            time: '2018/3/10',
+            folder: 'HTML',
+            tags: ['HTML', 'CSS', 'JS'],
+            title: 'ArticleTitle',
+            content: 'four',
+        }, {
+            id: 5,
+            time: '2018/3/10',
+            folder: 'HTML',
+            tags: ['HTML', 'CSS', 'JS'],
+            title: 'ArticleTitle',
+            content: 'five',
+        }, {
+            id: 6,
+            time: '2018/3/10',
+            folder: 'HTML',
+            tags: ['HTML', 'CSS', 'JS'],
+            title: 'ArticleTitle',
+            content: 'six',
+        }, {
+            id: 7,
+            time: '2018/3/10',
+            folder: 'HTML',
+            tags: ['HTML', 'CSS', 'JS'],
+            title: 'ArticleTitle',
+            content: 'seven',
+        }, {
+            id: 8,
+            time: '2018/3/10',
+            folder: 'HTML',
+            tags: ['HTML', 'CSS', 'JS'],
+            title: 'ArticleTitle',
+            content: 'eight',
+        }, {
+            id: 9,
+            time: '2018/3/10',
+            folder: 'HTML',
+            tags: ['HTML', 'CSS', 'JS'],
+            title: 'ArticleTitle',
+            content: 'nine',
+        }, {
+            id: 10,
+            time: '2018/3/10',
+            folder: 'HTML',
+            tags: ['HTML', 'CSS', 'JS'],
+            title: 'ArticleTitle',
+            content: 'ten',
+        }, {
+            id: 11,
+            time: '2018/3/10',
+            folder: 'HTML',
+            tags: ['HTML', 'CSS', 'JS'],
+            title: 'ArticleTitle',
+            content: 'eleven',
+        },
+    ]
+
+    let testList = [{
             time: '2018/3/10',
             folder: 'HTML',
             tags: ['HTML', 'CSS', 'JS'],
@@ -14,74 +94,36 @@ $(() => {
             folder: 'HTML',
             tags: ['HTML', 'CSS', 'JS'],
             title: 'ArticleTitle',
-            content: 'two',
+            content: 'one',
         }, {
             time: '2018/3/10',
             folder: 'HTML',
             tags: ['HTML', 'CSS', 'JS'],
             title: 'ArticleTitle',
-            content: 'three',
+            content: 'one',
         }, {
             time: '2018/3/10',
             folder: 'HTML',
             tags: ['HTML', 'CSS', 'JS'],
             title: 'ArticleTitle',
-            content: 'four',
-        }, {
-            time: '2018/3/10',
-            folder: 'HTML',
-            tags: ['HTML', 'CSS', 'JS'],
-            title: 'ArticleTitle',
-            content: 'five',
-        }, {
-            time: '2018/3/10',
-            folder: 'HTML',
-            tags: ['HTML', 'CSS', 'JS'],
-            title: 'ArticleTitle',
-            content: 'six',
-        }, {
-            time: '2018/3/10',
-            folder: 'HTML',
-            tags: ['HTML', 'CSS', 'JS'],
-            title: 'ArticleTitle',
-            content: 'seven',
-        }, {
-            time: '2018/3/10',
-            folder: 'HTML',
-            tags: ['HTML', 'CSS', 'JS'],
-            title: 'ArticleTitle',
-            content: 'eight',
-        }, {
-            time: '2018/3/10',
-            folder: 'HTML',
-            tags: ['HTML', 'CSS', 'JS'],
-            title: 'ArticleTitle',
-            content: 'nine',
-        }, {
-            time: '2018/3/10',
-            folder: 'HTML',
-            tags: ['HTML', 'CSS', 'JS'],
-            title: 'ArticleTitle',
-            content: 'ten',
-        }, {
-            time: '2018/3/10',
-            folder: 'HTML',
-            tags: ['HTML', 'CSS', 'JS'],
-            title: 'ArticleTitle',
-            content: 'eleven',
+            content: 'one',
         },
     ]
 
+    let targetList = artList
+
+    let perPage = 7
+
 
     // ? page1 初始 onload & render
-    renderArticle(artList, 1)
+    renderArticle(targetList, 1)
+    addPageNav(targetList, 1)
 
+    $('.readMoreBtn').click(() => {
+        let targetArticle = $(this).attr('data-link')
+        let filterArticle = attr => attr.title === targetArticle
+    })
 
-    addPageNav(artList, 1)
-
-    $('#pageNavNextBtn').wrap('<div class="pageNavJumpFix"></div>')
-    $('#pageNavPreBtn').wrap('<div class="pageNavJumpFix"></div>')
-    $('.pageNavJumpFix').height($('#pageNavNextBtn').outerHeight())
     
     $('#pageNavNextBtn').click(() => {
 
@@ -103,7 +145,7 @@ $(() => {
 
         $('.pageNavLink.pageNavActive').next().addClass('pageNavActive')
         $('.pageNavLink.pageNavActive').first().removeClass('pageNavActive')
-        renderArticle(artList, targetPage)
+        renderArticle(targetList, targetPage)
     })
 
     $('#pageNavPreBtn').click(() => {
@@ -127,7 +169,7 @@ $(() => {
 
         $('.pageNavLink.pageNavActive').prev().addClass('pageNavActive')
         $('.pageNavLink.pageNavActive').last().removeClass('pageNavActive')
-        renderArticle(artList, targetPage)
+        renderArticle(targetList, targetPage)
     })
 
     $('.pageNavLink').click(function () {
@@ -154,18 +196,18 @@ $(() => {
         } else {
             $('.pageNavLink').removeClass('pageNavActive')
             $(this).addClass('pageNavActive')
-            renderArticle(artList, targetPage)
+            renderArticle(targetList, targetPage)
         }
     })
 
     function renderArticle(data, page) {
-        $('.artList').fadeOut(300)
+        $('.targetList').fadeOut(300)
         let htmlString = ''
         //* 首頁為 page = 1
         // 修正array從0始 與 頁數從1始之差
         let mathFix = page - 1
-        let start = 0 + (mathFix * 5)
-        let end = 4 + (mathFix * 5)
+        let start = 0 + (mathFix * perPage)
+        let end = (perPage - 1) + (mathFix * perPage)
 
         //! 文章總數小於end 造成後面的文章 undefined而出錯
         let endFix = (data.length > end ? end : (data.length - 1))
@@ -193,7 +235,7 @@ $(() => {
                         <a href="#">${data[i].title}</a>
                     </h2>
                     <p class="artPreView">${data[i].content}</p>
-                    <button class="readMoreBtn" data-link="#">ReadMore</button>
+                    <button class="readMoreBtn" data-link="${data[i].id}">ReadMore</button>
                 </article>
                 <hr>
             `
@@ -201,10 +243,9 @@ $(() => {
         $('.artList').html(htmlString)
         $('.artList').fadeIn(500)
     }
-
     function addPageNav(data) {
         let artCount = data.length
-        let pageCount = (artCount < 5 ? 1 : Math.ceil(artCount / 5))
+        let pageCount = (artCount < perPage ? 1 : Math.ceil(artCount / perPage))
         createPageNavLoop(pageCount)
     }
 
@@ -229,4 +270,3 @@ $(() => {
         }
     }
 })
-

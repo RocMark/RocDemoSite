@@ -4,10 +4,11 @@ block aside
         nav
             h4.outLineText SideNavList
             ul.asideNavList
-                li.asideNavItem: button.asideNavLink.asideLinkActive Todo
                 li.asideNavItem: button.asideNavLink AboutMe
-                li.asideNavItem: button.asideNavLink Archive
-        section.asideSection.asideActive(data-sectionName="Todo")
+                li.asideNavItem: button.asideNavLink TodoList
+                li.asideNavItem: button.asideNavLink SiteInfo
+
+        section.asideSection(data-sectionName="TodoList")
             h3.asideSubTitle TODOList
             .asideIntro 
                 p LocalStorage TODOList 
@@ -25,5 +26,37 @@ block aside
                         .todoDetail(data-status="hidden") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor vel rerum iusto repellendus corrupti ipsa voluptatum natus quia fugit illo doloremque ratione eos, cupiditate, magnam consequatur, facere quidem quod nisi?
         section.asideSection(data-sectionName="AboutMe")
             h3.asideSubTitle AboutMe
-        section.asideSection(data-sectionName="Archive")
-            h3.asideSubTitle Archive
+            section.profileSection
+                figure.profilePic
+                    img(src="../img/profile.png")
+                    figcaption profilePicture
+                p 曾馬克
+                p Front-End Junior
+                p HTML SASS ES6 jQuery RWD
+                p 人はね、限界だと思ってからもうちょっといける.
+            h3.asideSubTitle ContactMe
+            section.contactSection
+                .contactBar
+                    a(href="#") 
+                        img(src="../img/gmail.svg")
+                    p onigir77799
+                a(href="https://github.com/RocMark" target="_blank") 
+                    img(src="../img/github.svg")
+        section.asideSection.asideActive(data-sectionName="SiteInfo")
+            h3.asideSubTitle SiteInfo
+            section.siteInfoSection
+                h3 Why Make This Site ?
+                p Demo What I Learn
+                hr
+                h3 What I Use to Make ?
+                p Pug / Sass / jQuery / ES6
+                p Git / Gulp
+                hr
+                h3 Demo
+                p LocalStorage TODOList
+                p LightBox
+                p Pagination 實作
+                p Fixed Nav
+                p Smooth Scrolling
+
+

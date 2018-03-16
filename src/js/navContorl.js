@@ -1,8 +1,6 @@
 $(() => {
 
-    // ---------------------------------------
-    //* asideNav
-    document.querySelector('.asideNavLink').style.borderBottom = '3px solid #930077'
+    $('.asideNavLink').first().css('borderBottom', '3px solid #930077')
 
     $('.asideNavLink').click(function () {
         $('.asideNavLink').css({ borderBottom: '3px solid #fff' })
