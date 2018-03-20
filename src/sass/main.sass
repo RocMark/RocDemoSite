@@ -119,3 +119,56 @@ hr
     hr
         margin: 15px 0
 //------------------------------------------------
+.artSectionTools
+    display: flex
+    flex-flow: row nowrap
+    align-items: center
+    padding-left: 10px
+.breadCrumbLink
+    color: #bcaaa4
+    font-size: 20px
+    font-weight: 500
+    span
+        &:hover
+            border-bottom: 0.5px solid #bcaaa4
+    &:after
+        display: inline-block
+        content: "/"
+        margin: 0 5px
+    &:last-child
+        &:after
+            content: ""
+.pageCount
+    box-sizing: border-box
+    margin-left: auto
+    display: flex
+    flex-flow: row nowrap
+    align-items: center
+    padding: 3px
+    label
+        display: inline-block
+        margin-right: 7px
+    input
+        flex: 1
+    input[type="number"]
+        padding: 5px 0 5px 5px 
+        margin: 0 7px
+        align-self: stretch
+        font-size: 19px
+        &:focus
+            border: 4px solid #80deea
+    input[type="submit"]
+        border-radius: 15px
+        border: none
+        +btnStyle
+        background-color: #7e57c2
+        letter-spacing: 1.2px
+        color: #fff
+        &:hover 
+            transform: scale(1.1)
+            transition: 0.4s
+            
+//------------------------------------------------
+//! Animation Section
+
+    

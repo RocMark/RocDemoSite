@@ -4,6 +4,15 @@ extends _layout
 block main
     //- .testBox
     section.artSection
+        .artSectionTools
+            .breadCrumb 
+                a.breadCrumbLink(href="#"): span Home
+                a.breadCrumbLink(href="#"): span Archives
+                a.breadCrumbLink(href="#"): span HTML
+            .pageCount
+                label 文章篇數設定
+                    input#pageCountSetUp(type="number" value="1" max="" min="1")
+                input#pageCountSetBtn(type="submit" value="Set")
         h4.outLineText#artSectionOutLine ArticleSection
         .artList
             

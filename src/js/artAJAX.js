@@ -1,9 +1,7 @@
 $(() => {
-    // ? Loop Tags 後面處理
-    // *  a 的 Link 未設
-    // ? Next Pre 之後再做
 
-    let artList = [{
+    let artList = [
+        {
             id: 1,
             time: '2018/3/10',
             folder: 'HTML',
@@ -83,7 +81,8 @@ $(() => {
         },
     ]
 
-    let testList = [{
+    let testList = [
+        {
             time: '2018/3/10',
             folder: 'HTML',
             tags: ['HTML', 'CSS', 'JS'],
@@ -112,7 +111,9 @@ $(() => {
 
     let targetList = artList
 
-    let perPage = 7
+    let perPage = 5
+
+    //* make article Class  store data & function
 
 
     // ? page1 初始 onload & render
@@ -124,12 +125,12 @@ $(() => {
         let filterArticle = attr => attr.title === targetArticle
     })
 
-    
+
     $('#pageNavNextBtn').click(() => {
 
-        let currentPage = parseInt($('article').first().attr('data-page'))
+        let currentPage = +$('article').first().attr('data-page')
         let targetPage = currentPage + 1
-        let pageCount = parseInt($('.pageNavLink').last().attr('data-page'))
+        let pageCount = +$('.pageNavLink').last().attr('data-page')
 
         if (targetPage === pageCount) {
             $('#pageNavNextBtn').hide(300)
@@ -138,7 +139,7 @@ $(() => {
         if (currentPage === pageCount) {
             $('#pageNavPreBtn').show(300)
         }
-        
+
         if (targetPage > 1) {
             $('#pageNavPreBtn').show(300)
         }
@@ -149,10 +150,10 @@ $(() => {
     })
 
     $('#pageNavPreBtn').click(() => {
-        
-        let currentPage = parseInt($('article').first().attr('data-page'))
+
+        let currentPage = +$('article').first().attr('data-page')
         let targetPage = currentPage - 1
-        let pageCount = parseInt($('.pageNavLink').last().attr('data-page'))
+        let pageCount = +$('.pageNavLink').last().attr('data-page')
 
         if (currentPage === 2) {
             $('#pageNavPreBtn').hide(300)
@@ -174,9 +175,9 @@ $(() => {
 
     $('.pageNavLink').click(function () {
 
-        let currentPage = parseInt($('article').attr('data-page'))
-        let targetPage = parseInt($(this).attr('data-page'))
-        let pageCount = parseInt($('.pageNavLink').last().attr('data-page'))
+        let currentPage = +$('article').attr('data-page')
+        let targetPage = +$(this).attr('data-page')
+        let pageCount = +$('.pageNavLink').last().attr('data-page')
 
         if (targetPage === 1) {
             $('#pageNavPreBtn').hide(300)
@@ -185,7 +186,7 @@ $(() => {
             $('#pageNavPreBtn').show(300)
             $('#pageNavNextBtn').show(300)
         }
-        
+
         if (targetPage === pageCount) {
             $('#pageNavNextBtn').hide(300)
         }

@@ -26,9 +26,11 @@
     "markdown.extension.preview.autoShowPreviewToSide": false,
     "cSpell.words": [
         "autofocus",
+        "jsload",
         "onblur",
         "onfocus",
         "onkeyup",
+        "prepend",
         "readonly",
         "saib"
     ],

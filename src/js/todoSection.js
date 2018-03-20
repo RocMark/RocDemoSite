@@ -1,7 +1,7 @@
 $(() => {
 
     $('.todoClearTrigger').click(() => {
-        $('.alertModalBox').fadeIn(500)
+        $('#alertModalBox').fadeIn(500)
         $('.fullScreenFilter').fadeIn(300)
 
         let modalBoxTemplate = {
@@ -15,9 +15,9 @@ $(() => {
     })
     
     function remakeModalBox(template) {
-        $('.alertModalBox').children('.modalTitle').text(template.title)
-        $('.alertModalBox').children('.modalContent').children('.modalText').text(template.text)
-        $('.alertModalBox').children('.modalContent').children('.modalSubmitBtn').attr('id', template.event)
+        $('#alertModalBox').children('.modalTitle').text(template.title)
+        $('#alertModalBox').children('.modalContent').children('.modalText').text(template.text)
+        $('#alertModalBox').children('.modalContent').children('.modalSubmitBtn').attr('id', template.event)
     }
 
     function todoCleanBtnListener() {

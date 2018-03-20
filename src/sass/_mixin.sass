@@ -4,8 +4,12 @@
 @mixin btnStyle
     padding: 8px 16px
     border-radius: 15px
+    color: #fff
     border: none
     cursor: pointer
+    &:hover
+        transform: scale(1.1)
+        transition: 0.4s
 
 @mixin square($size)
     width: $size

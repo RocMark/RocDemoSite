@@ -1,21 +1,20 @@
 $(() => {
 
-    $('.asideNavLink').first().css('borderBottom', '3px solid #930077')
+    // $('.asideNavLink').first().addClass('asideLinkActive')
 
-    $('.asideNavLink').click(function () {
-        $('.asideNavLink').css({ borderBottom: '3px solid #fff' })
-        $('.asideSection').removeClass('asideActive')
-        let target = $(`.asideSection[data-sectionName=${$(this).html()}]`)
-        target.addClass('asideActive')
-        $(this).addClass('asideLinkActive')
-        $(this).css({ borderBottom: '3px solid #930077' })
-    })
+    // $('.asideNavLink').click(function () {
+    //     $(this).siblings().removeClass('asideLinkActive')
+    //     $('.asideSection').removeClass('asideActive')
+    //     let target = $(`.asideSection[data-sectionName=${$(this).text()}]`)
+    //     target.addClass('asideActive')
+    //     $(this).addClass('asideLinkActive')
+    // })
     
 
-    $(window).scroll(() => { 
-        // hideModalBox()
-        // hideAside() 
-    })
+    // $(window).scroll(() => { 
+    //     // hideModalBox()
+    //     // hideAside() 
+    // })
 
     
     function hideModalBox() {
@@ -23,19 +22,19 @@ $(() => {
         $('.modalBox').fadeOut(200)
     }
 
-    function hideAside() { 
-        //* 待修改成滑左出去
-        $('.sideNav').hide(500)
-    }
+    // function hideAside() { 
+    //     //* 待修改成滑左出去
+    //     $('.sideNav').hide(500)
+    // }
 
-    $('main').click(() => { 
-        hideAside() 
-        hideModalBox()
-    })
+    // $('main').click(() => { 
+    //     hideAside() 
+    //     hideModalBox()
+    // })
 
-    $('.fullScreenFilter,.modalExitBtn,.modalCancelBtn').click(() => {
-        hideModalBox()
-    })
+    // $('.fullScreenFilter,.modalExitBtn,.modalCancelBtn').click(() => {
+    //     hideModalBox()
+    // })
 
     // ---------------------------------------
     //* back2TopBtn
@@ -61,7 +60,9 @@ $(() => {
             let scrollPosition = $(window).scrollTop()
             if (scrollPosition > navOffset) {
                 mainNav.addClass('navSticky')
-                back2Top.show(500)
+                if (scrollPosition >= (navOffset + 100)) {
+                    back2Top.show(500)
+                }
             } else {
                 back2Top.hide(500)
                 mainNav.removeClass('navSticky')
