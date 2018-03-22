@@ -17,10 +17,10 @@ $(() => {
     // })
 
     
-    function hideModalBox() {
-        $('.fullScreenFilter').fadeOut(100)
-        $('.modalBox').fadeOut(200)
-    }
+    // function hideModalBox() {
+    //     $('.fullScreenFilter').fadeOut(100)
+    //     $('.modalBox').fadeOut(200)
+    // }
 
     // function hideAside() { 
     //     //* 待修改成滑左出去

@@ -25,6 +25,7 @@
     "eslint.autoFixOnSave": true,
     "markdown.extension.preview.autoShowPreviewToSide": false,
     "cSpell.words": [
+        "acyclic",
         "autofocus",
         "jsload",
         "onblur",

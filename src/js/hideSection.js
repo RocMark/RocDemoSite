@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => { 
 
+    //! 待把 ModalBox & fullScreenFilter 合併
+
     let mainSecton = document.querySelector('main')
     let sideNav = document.querySelector('.sideNav')
     let fullScreenFilter = document.querySelector('.fullScreenFilter')
